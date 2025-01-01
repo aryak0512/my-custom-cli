@@ -1,5 +1,5 @@
 #!/bin/bash
-#curl -L -o cli-app-0.0.1-SNAPSHOT.jar https://raw.githubusercontent.com/aryak0512/my-custom-cli/master/executables/cli-app-0.0.1-SNAPSHOT.jar
+curl -L -o cli-app-0.0.1-SNAPSHOT.jar https://raw.githubusercontent.com/aryak0512/my-custom-cli/master/executables/cli-app-0.0.1-SNAPSHOT.jar
 chmod +x cli-app-0.0.1-SNAPSHOT.jar
 version=$(java -version 2>&1 | head -n 1 | cut -d '"' -f2)
 
