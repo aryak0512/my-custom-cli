@@ -27,3 +27,14 @@
 1735720866244:date
 1735720883739:ping
 1735720966055:cp
+1735721568050:exit
+1735721605917:ping
+1735721608674:date
+1735721620369:lpush products milk
+1735721626925:lpush
+1735721634885:lpush products eggs
+1735721638962:show products
+1735721643514:rpop products
+1735721647494:show products
+1735721651988:llen products
+1735721859624:cp "/Users/aryak/Desktop/Unix 2/Hotel.txt" "/Users/aryak/Desktop"
