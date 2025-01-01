@@ -28,7 +28,7 @@ public class MyCommands {
         return new Date();
     }
 
-    // cpfile "/Users/aryak/Desktop/Unix 2/Hotel.txt" "/Users/aryak/Desktop"
+    // cp "/Users/aryak/Desktop/Unix 2/Hotel.txt" "/Users/aryak/Desktop"
     @ShellMethod(key = "cp", value = "Copies a file from one location to another on local disk")
     public void copyFile(String path1, String path2) {
 
