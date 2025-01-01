@@ -11,8 +11,10 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static com.aryak.cli.utils.Util.exists;
+
 @ShellComponent
-public class MyFirstCommand {
+public class MyCommands {
 
     static Map<String, List<String>> lists = new ConcurrentHashMap<>();
 
@@ -42,19 +44,46 @@ public class MyFirstCommand {
         }
     }
 
+    // lpush products eggs
+    // lpush products milk
     @ShellMethod(key = "lpush", value = "Left push an element to a list")
-    public String leftPush(@ShellOption String listName, @ShellOption String value) {
+    public int leftPush(@ShellOption String listName, @ShellOption String value) {
 
-        // check whether list exists or not
-        if ( lists.containsKey(listName) ) {
-            // add
+        List<String> list;
+        if ( exists.test(lists.keySet(), listName) ) {
+            list = lists.get(listName);
+            list.addFirst(value);
         } else {
-            List<String> list = new ArrayList<>();
+            list = new ArrayList<>();
             list.add(value);
             lists.put(listName, list);
         }
+        return list.size();
+    }
 
-        return null;
+    // rpop products
+    @ShellMethod(key = "rpop", value = "Right pop an element from a list")
+    public int rightPop(@ShellOption String listName) {
+
+        List<String> list;
+        if ( exists.test(lists.keySet(), listName) ) {
+            list = lists.get(listName);
+            list.removeLast();
+            return list.size();
+        }
+        return -1;
+    }
+
+    // show products
+    @ShellMethod(key = "show", value = "Display the entire list")
+    public List<String> displayList(@ShellOption String listName) {
+        return exists.test(lists.keySet(), listName) ? lists.get(listName) : List.of();
+    }
+
+    // llen products
+    @ShellMethod(key = "llen", value = "Display the length of list")
+    public int length(@ShellOption String listName) {
+        return exists.test(lists.keySet(), listName) ? lists.size() : 0 ;
     }
 
 }

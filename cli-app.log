@@ -15,3 +15,12 @@
 1735716053054:cpfile /etc/system/test /Desktop/test.html
 1735716290920:cpfile "/Users/aryak/Desktop/Unix 2/Hotel.txt" /Users/aryak/Desktop
 1735716384336:cpfile "/Users/aryak/Desktop/Unix 2/Hotel.txt" "/Users/aryak/Desktop"
+1735718199646:lpush products eggs
+1735718228214:lpush products laptop
+1735718308411:lpush products eggs
+1735718318168:lpush products milk
+1735718876461:lpush products eggs
+1735718884476:lpush products milk
+1735718888989:show products
+1735718897727:rpop products
+1735718922786:show products
