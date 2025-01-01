@@ -13,7 +13,7 @@
 
 ### Installing the CLI on your machine
 
-- Java 21 installation is a prerequisite. Run the bash script available in executables folder
+- Java 21 installation is a prerequisite. Run the bash script available
 ```console
 ./install-cli.sh
 ```
