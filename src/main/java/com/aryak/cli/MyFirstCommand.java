@@ -12,7 +12,6 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @ShellComponent
-
 public class MyFirstCommand {
 
     static Map<String, List<String>> lists = new ConcurrentHashMap<>();
