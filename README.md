@@ -15,7 +15,7 @@
 
 - Java 21 installation is a prerequisite. Run the bash script available in executables folder
 ```console
-./start.sh
+./install-cli.sh
 ```
 ### GLOSSARY OF COMMANDS
 
